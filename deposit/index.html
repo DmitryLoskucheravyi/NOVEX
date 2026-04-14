@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Page Replica</title>
+    <link rel="stylesheet" href="deposit-modal.css">
+    <link rel="stylesheet" href="deposit.css">
+    <link rel="stylesheet" href="media.css" media="screen and (max-width: 768px)">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__left">
+                <button class="mobile-sidebar-toggle js-mobile-sidebar-toggle" type="button" aria-label="Открыть меню"
+                    aria-expanded="false" title="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- <a href="#" class="header__logo" title="NOVEX">
+                    <img src="assets/logo.svg" alt="NOVEX">
+                    <span>NOVEX</span>
+                </a> -->
+
+                <a href="#" class="header__logo" title="NOVEX">
+                    <span>NOVEX</span>
+                </a>
+            </div>
+
+            <nav class="header__nav" aria-label="Основная навигация сайта">
+                <a href="#" class="header__nav-link">Купить криптовалюту</a>
+                <a href="#" class="header__nav-link">Конвертация</a>
+                <a href="#" class="header__nav-link">Торговля</a>
+                <a href="#" class="header__nav-link">Баланс</a>
+                <a href="#" class="header__nav-link">О нас</a>
+                <a href="#" class="header__nav-link">Поддержка</a>
+            </nav>
+
+            <div class="header__right">
+                <button class="header__lang" type="button">RU</button>
+                <button class="header__icon-btn" type="button" aria-label="Уведомления">🔔</button>
+
+                <div class="header__profile">
+                    <div class="header__avatar">AT</div>
+                    <span class="header__name">AlphaTrader</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="app">
+
+        <aside class="sidebar">
+            <nav class="nav" aria-label="Основная навигация">
+                <a class="nav-item" href="#" title="Перейти в раздел Обзор">
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                        <circle cx="8" cy="8" r="3"></circle>
+                        <circle cx="16" cy="8" r="3"></circle>
+                        <path d="M4 17c0-2 2-4 4-4s4 2 4 4"></path>
+                        <path d="M12 17c0-2 2-4 4-4s4 2 4 4"></path>
+                    </svg>
+                    <span>Обзор</span>
+                </a>
+            </nav>
+
+            <section aria-labelledby="finance-nav-title">
+                <h2 class="nav-group-title" id="finance-nav-title">Финансы</h2>
+                <nav class="nav" aria-label="Навигация по финансам">
+                    <a class="nav-item" href="#" title="Перейти в раздел Баланс">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <path d="M4 7h16M4 12h16M4 17h10"></path>
+                        </svg>
+                        <span>Баланс</span>
+                    </a>
+                    <a class="nav-item active" href="#" aria-current="page" title="Текущий раздел Депозит">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <path d="M12 3v18"></path>
+                            <path d="M7 8l5-5 5 5"></path>
+                            <path d="M17 16l-5 5-5-5"></path>
+                        </svg>
+                        <span>Депозит</span>
+                    </a>
+                    <a class="nav-item" href="#" title="Перейти в раздел Вывод средств">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <path d="M12 3v18"></path>
+                            <path d="M7 16l5 5 5-5"></path>
+                            <path d="M17 8l-5-5-5 5"></path>
+                        </svg>
+                        <span>Вывод средств</span>
+                    </a>
+                    <a class="nav-item" href="#" title="Перейти в раздел История транзакций">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <path d="M12 6v6l4 2"></path>
+                            <circle cx="12" cy="12" r="9"></circle>
+                        </svg>
+                        <span>История транзакций</span>
+                    </a>
+                    <a class="nav-item" href="#" title="Перейти в раздел Конвертация">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <path d="M17 1l4 4-4 4"></path>
+                            <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                            <path d="M7 23l-4-4 4-4"></path>
+                            <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                        </svg>
+                        <span>Конвертация</span>
+                    </a>
+                </nav>
+            </section>
+
+            <section aria-labelledby="account-nav-title">
+                <h2 class="nav-group-title" id="account-nav-title">Аккаунт</h2>
+                <nav class="nav" aria-label="Навигация по аккаунту">
+                    <a class="nav-item" href="#" title="Перейти в раздел Профиль">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <circle cx="12" cy="8" r="4"></circle>
+                            <path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"></path>
+                        </svg>
+                        <span>Профиль</span>
+                    </a>
+                    <a class="nav-item" href="#" title="Перейти в раздел Безопасность">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <rect x="4" y="11" width="16" height="9" rx="2"></rect>
+                            <path d="M8 11V8a4 4 0 1 1 8 0v3"></path>
+                        </svg>
+                        <span>Безопасность</span>
+                    </a>
+                    <a class="nav-item" href="#" title="Перейти в раздел Верификация">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"></path>
+                            <path d="M9 12l2 2 4-4"></path>
+                        </svg>
+                        <span>Верификация</span>
+                    </a>
+                    <a class="nav-item" href="#" title="Перейти в раздел Реферальная программа">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <path d="M15 8a3 3 0 1 0-6 0c0 5-4 4-4 7h14c0-3-4-2-4-7"></path>
+                            <path d="M10 19a2 2 0 0 0 4 0"></path>
+                        </svg>
+                        <span>Реферальная программа</span>
+                    </a>
+                    <a class="nav-item" href="#" title="Перейти в раздел Мои комиссии">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9"></circle>
+                            <path d="M15 9l-6 6"></path>
+                            <path d="M9 9l6 6"></path>
+                        </svg>
+                        <span>Мои комиссии</span>
+                    </a>
+                    <a class="nav-item" href="#" title="Перейти в раздел Уведомления">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <path d="M6 8a6 6 0 1 1 12 0c0 7 3 6 3 8H3c0-2 3-1 3-8"></path>
+                            <path d="M10 20a2 2 0 0 0 4 0"></path>
+                        </svg>
+                        <span>Уведомления</span>
+                    </a>
+                </nav>
+            </section>
+
+            <section aria-labelledby="settings-nav-title">
+                <h2 class="nav-group-title" id="settings-nav-title">Настройки</h2>
+                <nav class="nav" aria-label="Навигация по настройкам">
+                    <a class="nav-item" href="#" title="Перейти в раздел Настройки">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path
+                                d="M19.4 15a1.6 1.6 0 0 0 .32 1.76l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.6 1.6 0 0 0 15 19.4a1.6 1.6 0 0 0-1 .6 1.6 1.6 0 0 0-.4 1V21a2 2 0 1 1-4 0v-.09a1.6 1.6 0 0 0-.4-1 1.6 1.6 0 0 0-1-.6 1.6 1.6 0 0 0-1.76.32l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.6 1.6 0 0 0 4.6 15a1.6 1.6 0 0 0-.6-1 1.6 1.6 0 0 0-1-.4H3a2 2 0 1 1 0-4h.09a1.6 1.6 0 0 0 1-.4 1.6 1.6 0 0 0 .6-1 1.6 1.6 0 0 0-.32-1.76l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.6 1.6 0 0 0 9 4.6a1.6 1.6 0 0 0 1-.6 1.6 1.6 0 0 0 .4-1V3a2 2 0 1 1 4 0v.09a1.6 1.6 0 0 0 .4 1 1.6 1.6 0 0 0 1 .6 1.6 1.6 0 0 0 1.76-.32l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.6 1.6 0 0 0 19.4 9c.24.3.47.64.6 1 .09.3.14.64.14 1s-.05.7-.14 1c-.13.36-.36.7-.6 1z">
+                            </path>
+                        </svg>
+                        <span>Настройки</span>
+                    </a>
+                    <a class="nav-item" href="#" title="Перейти в раздел API ключи">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <path d="M4 7h16"></path>
+                            <path d="M4 12h9"></path>
+                            <path d="M4 17h16"></path>
+                            <circle cx="17" cy="12" r="3"></circle>
+                        </svg>
+                        <span>API ключи</span>
+                    </a>
+                </nav>
+            </section>
+
+            <section class="support-box" aria-labelledby="support-title">
+                <h2 id="support-title">Нужна помощь?</h2>
+                <p>Обратитесь в нашу поддержку, если у вас возникли вопросы по депозиту.</p>
+                <button type="button" title="Связаться с поддержкой">Связаться с поддержкой</button>
+            </section>
+        </aside>
+
+        <div class="sidebar-overlay js-sidebar-overlay" aria-hidden="true"></div>
+
+        <main class="content">
+            <div class="page">
+                <header class="page-header">
+                    <h1>Депозит</h1>
+                    <p>Пополните свой аккаунт цифровыми активами</p>
+                </header>
+
+                <section class="section" aria-labelledby="deposit-step-1-title">
+                    <div class="section-title-row">
+                        <h2 class="substep-title" id="deposit-step-1-title">1. Выберите монету для депозита</h2>
+                        <button class="section-link js-open-coins-modal" type="button"
+                            title="Открыть список других монет">
+                            Другие монеты
+                        </button>
+                    </div>
+
+                    <div class="coin-row js-coin-row" aria-label="Список монет">
+                        <div class="coin-card active" data-coin="USDT" title="Выбрать монету USDT">
+                            <div class="coin-icon">
+                                <img src="assets/usdt-svgrepo-com.svg" alt="USDT">
+                            </div>
+                            <div class="coin-text">
+                                <strong>USDT</strong>
+                                <span>Tether USDT</span>
+                            </div>
+                        </div>
+                        <div class="coin-card" data-coin="BTC" title="Выбрать монету BTC">
+                            <div class="coin-icon btc" aria-hidden="true">₿</div>
+                            <div class="coin-text">
+                                <strong>BTC</strong>
+                                <span>Bitcoin</span>
+                            </div>
+                        </div>
+                        <div class="coin-card" data-coin="ETH" title="Выбрать монету ETH">
+                            <div class="coin-icon eth" aria-hidden="true">◆</div>
+                            <div class="coin-text">
+                                <strong>ETH</strong>
+                                <span>Ethereum</span>
+                            </div>
+                        </div>
+                        <div class="coin-card" data-coin="USDC" title="Выбрать монету USDC">
+                            <div class="coin-icon usdc" aria-hidden="true">$</div>
+                            <div class="coin-text">
+                                <strong>USDC</strong>
+                                <span>USD Coin</span>
+                            </div>
+                        </div>
+                        <div class="coin-card" data-coin="BNB" title="Выбрать монету BNB">
+                            <div class="coin-icon bnb" aria-hidden="true">◇</div>
+                            <div class="coin-text">
+                                <strong>BNB</strong>
+                                <span>BNB</span>
+                            </div>
+                        </div>
+                        <div class="coin-card" data-coin="XRP" title="Выбрать монету XRP">
+                            <div class="coin-icon xrp" aria-hidden="true">X</div>
+                            <div class="coin-text">
+                                <strong>XRP</strong>
+                                <span>XRP</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="coins-modal js-coins-modal" aria-hidden="true">
+                    <div class="coins-modal__overlay js-coins-modal-overlay"></div>
+
+                    <div class="coins-modal__dialog" role="dialog" aria-modal="true" aria-label="Выбор монеты">
+                        <div class="coins-modal__header">
+                            <h3 class="coins-modal__title">Другие монеты</h3>
+                            <button class="coins-modal__close js-close-coins-modal" type="button"
+                                aria-label="Закрыть окно выбора монеты" title="Закрыть окно">
+                                ×
+                            </button>
+                        </div>
+
+                        <div class="coins-modal__list js-extra-coins-list"></div>
+                    </div>
+                </div>
+
+                <section class="section sec-deposit-step-2" aria-labelledby="deposit-step-2-title">
+                    <h2 class="substep-title" id="deposit-step-2-title">2. Детали депозита</h2>
+                    <p class="network-title">Выберите сеть</p>
+
+                    <div class="network-grid js-network-grid" aria-label="Список сетей"></div>
+
+                    <div class="hint-row">
+                        <div class="hint-icon" aria-hidden="true">i</div>
+                        <div>
+                            Убедитесь, что выбранная сеть совпадает с сетью, которую вы используете для отправки
+                            средств.
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section" aria-labelledby="deposit-step-3-title">
+                    <h2 class="substep-title" id="deposit-step-3-title">3. Адрес депозита</h2>
+
+                    <div class="deposit-layout">
+                        <div>
+                            <div class="field-label js-deposit-network-label">
+                                Адрес депозита (TRC20)
+                            </div>
+
+                            <div class="address-box">
+                                <code class="js-deposit-address">TQXz96r6Tt3eJf1FzqGfQ9oR1mX9h1mYSi</code>
+                                <button class="copy-btn" type="button" title="Скопировать адрес депозита"
+                                    aria-label="Скопировать адрес депозита">
+                                    ⧉
+                                </button>
+                            </div>
+
+                            <div class="warning-box">
+                                <div class="warning-icon" aria-hidden="true">⚠</div>
+                                <div>
+                                    <strong class="js-warning-coin-text">
+                                        Отправляйте только <span class="js-warning-coin-span">USDT</span> на этот адрес.
+                                    </strong>
+                                    <p>Отправка других монет может привести к потере средств.</p>
+                                </div>
+                            </div>
+
+                            <div class="deposit-meta">
+                                <div class="meta-col">
+                                    <span>Сеть</span>
+                                    <strong class="js-network-name">TRC20</strong>
+                                </div>
+
+                                <div class="meta-col">
+                                    <span>Минимальная сумма депозита</span>
+                                    <strong class="js-min-deposit">1 USDT</strong>
+                                </div>
+
+                                <div class="meta-col">
+                                    <span>Зачисление</span>
+                                    <strong class="js-arrival-time">≈ 1 мин</strong>
+                                    <small>Контракт завершаетcя на…iJ6t</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <aside class="qr-panel" aria-labelledby="qr-title">
+                            <h3 class="qr-title" id="qr-title">QR-код</h3>
+                            <div class="qr-box">
+                                <img src="QRS/Tether.png" alt="QR-код для депозита USDT" class="qr js-qr-image">
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+
+                <section class="section" aria-labelledby="deposit-history-title">
+                    <div class="table-header">
+                        <h2 class="table-title" id="deposit-history-title">История депозитов USDT</h2>
+                        <button class="section-link js-toggle-history" type="button"
+                            title="Показать или скрыть полную историю депозитов">
+                            Посмотреть все
+                        </button>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table>
+                            <caption class="visually-hidden">История депозитов USDT</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Дата</th>
+                                    <th scope="col">Сеть</th>
+                                    <th scope="col">Сумма</th>
+                                    <th scope="col">Статус</th>
+                                    <th scope="col">TxID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>12.05.2024 14:32</td>
+                                    <td>TRC20</td>
+                                    <td>500 USDT</td>
+                                    <td><span class="status success">Успешно</span></td>
+                                    <td><a class="tx-link" href="#"
+                                            title="Открыть транзакцию 7f3a...b6c9">7f3a...b6c9</a></td>
+                                </tr>
+                                <tr>
+                                    <td>11.05.2024 09:15</td>
+                                    <td>ERC20</td>
+                                    <td>250 USDT</td>
+                                    <td><span class="status success">Успешно</span></td>
+                                    <td><a class="tx-link" href="#"
+                                            title="Открыть транзакцию e01a...f714">e01a...f714</a></td>
+                                </tr>
+                                <tr>
+                                    <td>09.05.2024 17:48</td>
+                                    <td>BEP20</td>
+                                    <td>100 USDT</td>
+                                    <td><span class="status success">Успешно</span></td>
+                                    <td><a class="tx-link" href="#"
+                                            title="Открыть транзакцию c9b2...d3f7">c9b2...d3f7</a></td>
+                                </tr>
+
+                                <tr class="history-extra-row">
+                                    <td>08.05.2024 11:03</td>
+                                    <td>TRC20</td>
+                                    <td>350 USDT</td>
+                                    <td><span class="status processing">В обработке</span></td>
+                                    <td>—</td>
+                                </tr>
+                                <tr class="history-extra-row">
+                                    <td>07.05.2024 20:21</td>
+                                    <td>TRC20</td>
+                                    <td>200 USDT</td>
+                                    <td><span class="status failed">Неудачно</span></td>
+                                    <td>—</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-footer">
+                        <div class="footer-note">
+                            <div class="shield" aria-hidden="true">🛡</div>
+                            <div>
+                                <strong>Депозит не поступил?</strong>
+                                <p>Проверьте статус транзакции в блокчейне или обратитесь в поддержку.</p>
+                            </div>
+                        </div>
+                        <button class="status-btn" type="button" title="Проверить статус депозита">
+                            Проверить статус
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="deposit.js"></script>
+</body>
+
+</html>
