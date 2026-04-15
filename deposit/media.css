@@ -148,11 +148,6 @@
         word-break: break-word;
     }
 
-    .table-header {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
     .table-title {
         font-size: 1.125rem;
     }
@@ -329,10 +324,6 @@
     .header__logo span {
         font-size: 1.1rem;
     }
-}
-
-
-@media (max-width: 370px) {
 
     /* Фікс головного overflow */
     .content {
@@ -349,8 +340,7 @@
         margin: 1rem auto 0;
     }
 
-    /* Фікс sidebar-overlay і modal overlay — вони fixed/absolute inset:0, 
-       overflow від них помилковий, але щоб прибрати детекцію: */
+    /* Фікс overlay */
     .sidebar-overlay,
     .coins-modal__overlay {
         right: 0;

@@ -563,13 +563,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function init() {
     bindEvents();
-    renderBaseCoins();
-    renderExtraCoinsModal();
-    renderNetworks(state.currentCoin);
     syncInsertedExtraCoin(state.currentCoin);
     selectCoin(state.currentCoin);
   }
-
   init();
 
 

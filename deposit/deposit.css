@@ -139,17 +139,8 @@ a:hover {
   align-items: center;
   gap: 1.5rem;
   flex-wrap: nowrap;
-  /* забороняємо перенос */
-  /* обрізаємо якщо не влазить */
   flex-shrink: 1;
-  /* дозволяємо стискатись */
   min-width: 0;
-  /* ключ — без цього flex не стискається */
-}
-
-.header__nav-link {
-  white-space: nowrap;
-  flex-shrink: 0;
 }
 
 .header__nav-link {
@@ -158,6 +149,7 @@ a:hover {
   font-weight: 500;
   text-decoration: none;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .header__nav-more {
@@ -960,9 +952,6 @@ tbody td {
 }
 
 /* #endregion Table footer */
-
-
-
 
 /* #region additional */
 .mobile-sidebar-toggle {
