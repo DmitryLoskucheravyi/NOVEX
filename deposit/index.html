@@ -32,19 +32,24 @@
                 </a>
             </div>
 
-            <nav class="header__nav" aria-label="Основная навигация сайта">
+            <nav class="header__nav js-header-nav" aria-label="Основная навигация сайта">
                 <a href="#" class="header__nav-link">Купить криптовалюту</a>
                 <a href="#" class="header__nav-link">Конвертация</a>
                 <a href="#" class="header__nav-link">Торговля</a>
                 <a href="#" class="header__nav-link">Баланс</a>
                 <a href="#" class="header__nav-link">О нас</a>
                 <a href="#" class="header__nav-link">Поддержка</a>
+                <button class="header__nav-more js-header-nav-more" type="button" aria-label="Ещё">
+                    Ещё <span class="header__nav-more-arrow">▾</span>
+                    <div class="header__nav-dropdown js-header-nav-dropdown"></div>
+                </button>
             </nav>
 
             <div class="header__right">
                 <button class="header__lang" type="button">RU</button>
-                <button class="header__icon-btn" type="button" aria-label="Уведомления">🔔</button>
-
+                <button class="header__icon-btn js-header-notif" type="button" aria-label="Уведомления">
+                    🔔
+                </button>
                 <div class="header__profile">
                     <div class="header__avatar">AT</div>
                     <span class="header__name">AlphaTrader</span>

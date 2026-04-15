@@ -48,6 +48,15 @@
     .coins-modal__list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    .header__nav {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .header__nav-link {
+        font-size: 0.8125rem;
+    }
 }
 
 @media (max-width: 767px) {
@@ -59,16 +68,46 @@
         padding: 0.875rem 1rem;
     }
 
-    .header__nav,
     .header__right {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    /* Ховаємо тільки ім'я та lang на мобільних */
+    .header__lang,
+    .header__name {
         display: none;
+    }
+
+    /* Іконка дзвінка — залишається */
+    .header__icon-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.25rem;
+        height: 2.25rem;
+        border: 1px solid var(--border);
+        border-radius: 0.625rem;
+        background: #fff;
+        font-size: 1rem;
     }
 
     .header__logo span {
         font-size: 1.25rem;
     }
 
+    .app {
+        grid-template-columns: 1fr;
+        /* явно перебити */
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     .content {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
         padding: 1rem;
     }
 
@@ -244,7 +283,7 @@
         padding: 0.875rem 0.75rem;
     }
 
-    
+
 
     thead th,
     tbody td {
@@ -267,3 +306,53 @@
         font-size: 1.25rem;
     }
 }
+
+
+
+@media (max-width: 370px) {
+    .header__inner {
+        gap: 0.5rem;
+        padding: 0.75rem 0.625rem;
+    }
+
+    .mobile-sidebar-toggle {
+        width: 2.25rem;
+        height: 2.25rem;
+        flex-shrink: 0;
+    }
+
+    .header__logo span {
+        font-size: 1.1rem;
+    }
+}
+
+
+@media (max-width: 370px) {
+
+    /* Фікс головного overflow */
+    .content {
+        padding: 0.75rem;
+    }
+
+    /* Фікс modal dialog */
+    .coins-modal {
+        padding: 0.5rem;
+    }
+
+    .coins-modal__dialog {
+        width: 100%;
+        margin: 1rem auto 0;
+    }
+
+    /* Фікс sidebar-overlay і modal overlay — вони fixed/absolute inset:0, 
+       overflow від них помилковий, але щоб прибрати детекцію: */
+    .sidebar-overlay,
+    .coins-modal__overlay {
+        right: 0;
+        width: 100%;
+        max-width: 100vw;
+    }
+}
+
+
+

@@ -421,6 +421,62 @@ document.addEventListener("DOMContentLoaded", () => {
 
         selectCoin(card.dataset.coin);
       });
+      // Header nav overflow detection
+      function updateNavOverflow() {
+        const nav = document.querySelector('.js-header-nav');
+        const moreBtn = document.querySelector('.js-header-nav-more');
+        const dropdown = document.querySelector('.js-header-nav-dropdown');
+        if (!nav || !moreBtn || !dropdown) return;
+
+        const links = [...nav.querySelectorAll('.header__nav-link')];
+
+        // Скидаємо стан
+        links.forEach(l => l.style.display = '');
+        moreBtn.style.display = 'none';
+        dropdown.innerHTML = '';
+
+        // Тимчасово показуємо кнопку щоб врахувати її ширину
+        moreBtn.style.display = 'inline-flex';
+        moreBtn.style.visibility = 'hidden';
+
+        const navRight = nav.getBoundingClientRect().right;
+        const moreBtnWidth = moreBtn.getBoundingClientRect().width;
+
+        moreBtn.style.display = 'none';
+        moreBtn.style.visibility = '';
+
+        const hidden = links.filter(link => {
+          return link.getBoundingClientRect().right > navRight - moreBtnWidth - 8;
+        });
+
+        if (hidden.length) {
+          moreBtn.style.display = 'inline-flex';
+          hidden.forEach(link => {
+            link.style.display = 'none';
+            const clone = link.cloneNode(true);
+            clone.style.display = '';
+            dropdown.appendChild(clone);
+          });
+        }
+      }
+
+      updateNavOverflow();
+      window.addEventListener('resize', updateNavOverflow);
+
+      const moreBtn = document.querySelector('.js-header-nav-more');
+      if (moreBtn) {
+        moreBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          e.preventDefault();
+          moreBtn.classList.toggle('is-open');
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!moreBtn.contains(e.target)) {
+            moreBtn.classList.remove('is-open');
+          }
+        });
+      }
     }
 
     if (elements.networkGrid) {
@@ -515,4 +571,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   init();
+
+
 });
