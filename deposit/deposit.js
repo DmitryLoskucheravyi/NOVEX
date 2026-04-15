@@ -98,12 +98,12 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "BEP20", fee: "0.0005 BNB", time: "≈ 2 мин", icon: "assets/bnb-bnb-logo.svg", minDeposit: "0.001 BNB", address: "0xb21d9eF2A1B4c37d5F9b8E1D3A7cB22f18A4dE11" },
       ],
     },
-    XRP: {
-      label: "XRP",
+    TRX: {
+      label: "TRX",
       icon: "assets/trx-svgrepo-com.svg",
-      qr: "QRS/XRP.png",
+      qr: "QRS/TRX.png",
       networks: [
-        { name: "XRP", fee: "0.25 XRP", time: "≈ 1–3 мин", icon: "assets/trx-svgrepo-com.svg", minDeposit: "1 XRP", address: "rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh" },
+        { name: "TRX", fee: "0.25 TRX", time: "≈ 1–3 мин", icon: "assets/trx-svgrepo-com.svg", minDeposit: "1 TRX", address: "rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh" },
       ],
     },
     SOL: {
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   };
 
-  const BASE_COINS = ["USDT", "BTC", "ETH", "USDC", "BNB", "XRP"];
+  const BASE_COINS = ["USDT", "BTC", "ETH", "USDC", "BNB", "TRX"];
   const EXTRA_COINS = ["SOL", "DOGE", "TON", "ADA"];
 
   const state = {

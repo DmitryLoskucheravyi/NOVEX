@@ -204,6 +204,9 @@
         border-radius: 0.75rem;
         box-shadow: var(--shadow);
     }
+    .header__nav {
+        display: none;
+    }
 
     .mobile-sidebar-toggle span {
         display: block;
@@ -217,7 +220,7 @@
 
     .sidebar {
         position: fixed;
-        top: 0;
+        top: 50px;
         left: 0;
         z-index: 1102;
         width: min(19rem, 86vw);
@@ -305,6 +308,8 @@
         height: 2.125rem;
         font-size: 1.25rem;
     }
+    
+    
 }
 
 

@@ -60,50 +60,34 @@
     <div class="app">
 
         <aside class="sidebar">
-            <nav class="nav" aria-label="Основная навигация">
-                <a class="nav-item" href="#" title="Перейти в раздел Обзор">
-                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
-                        <circle cx="8" cy="8" r="3"></circle>
-                        <circle cx="16" cy="8" r="3"></circle>
-                        <path d="M4 17c0-2 2-4 4-4s4 2 4 4"></path>
-                        <path d="M12 17c0-2 2-4 4-4s4 2 4 4"></path>
-                    </svg>
-                    <span>Обзор</span>
-                </a>
-            </nav>
-
-            <section aria-labelledby="finance-nav-title">
-                <h2 class="nav-group-title" id="finance-nav-title">Финансы</h2>
-                <nav class="nav" aria-label="Навигация по финансам">
+            <section aria-labelledby="account-nav-title">
+                <h2 class="nav-group-title" id="account-nav-title">Аккаунт</h2>
+                <nav class="nav" aria-label="Навигация по аккаунту">
                     <a class="nav-item" href="#" title="Перейти в раздел Баланс">
                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
-                            <path d="M4 7h16M4 12h16M4 17h10"></path>
+                            <rect x="3" y="6" width="18" height="12" rx="2"></rect>
+                            <path d="M16 12h2"></path>
+                            <path d="M3 9h18"></path>
                         </svg>
                         <span>Баланс</span>
                     </a>
-                    <a class="nav-item active" href="#" aria-current="page" title="Текущий раздел Депозит">
+
+                    <a class="nav-item active" href="#" title="Перейти в раздел Депозит">
                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
                             <path d="M12 3v18"></path>
                             <path d="M7 8l5-5 5 5"></path>
-                            <path d="M17 16l-5 5-5-5"></path>
                         </svg>
                         <span>Депозит</span>
                     </a>
+
                     <a class="nav-item" href="#" title="Перейти в раздел Вывод средств">
                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
                             <path d="M12 3v18"></path>
                             <path d="M7 16l5 5 5-5"></path>
-                            <path d="M17 8l-5-5-5 5"></path>
                         </svg>
                         <span>Вывод средств</span>
                     </a>
-                    <a class="nav-item" href="#" title="Перейти в раздел История транзакций">
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
-                            <path d="M12 6v6l4 2"></path>
-                            <circle cx="12" cy="12" r="9"></circle>
-                        </svg>
-                        <span>История транзакций</span>
-                    </a>
+
                     <a class="nav-item" href="#" title="Перейти в раздел Конвертация">
                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
                             <path d="M17 1l4 4-4 4"></path>
@@ -116,75 +100,43 @@
                 </nav>
             </section>
 
-            <section aria-labelledby="account-nav-title">
-                <h2 class="nav-group-title" id="account-nav-title">Аккаунт</h2>
-                <nav class="nav" aria-label="Навигация по аккаунту">
-                    <a class="nav-item" href="#" title="Перейти в раздел Профиль">
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
-                            <circle cx="12" cy="8" r="4"></circle>
-                            <path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"></path>
-                        </svg>
-                        <span>Профиль</span>
-                    </a>
-                    <a class="nav-item" href="#" title="Перейти в раздел Безопасность">
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
-                            <rect x="4" y="11" width="16" height="9" rx="2"></rect>
-                            <path d="M8 11V8a4 4 0 1 1 8 0v3"></path>
-                        </svg>
-                        <span>Безопасность</span>
-                    </a>
-                    <a class="nav-item" href="#" title="Перейти в раздел Верификация">
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
-                            <path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"></path>
-                            <path d="M9 12l2 2 4-4"></path>
-                        </svg>
-                        <span>Верификация</span>
-                    </a>
-                    <a class="nav-item" href="#" title="Перейти в раздел Реферальная программа">
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
-                            <path d="M15 8a3 3 0 1 0-6 0c0 5-4 4-4 7h14c0-3-4-2-4-7"></path>
-                            <path d="M10 19a2 2 0 0 0 4 0"></path>
-                        </svg>
-                        <span>Реферальная программа</span>
-                    </a>
-                    <a class="nav-item" href="#" title="Перейти в раздел Мои комиссии">
+            <section aria-labelledby="finance-nav-title">
+                <h2 class="nav-group-title" id="finance-nav-title">Финансы</h2>
+                <nav class="nav" aria-label="Навигация по финансам">
+                    <a class="nav-item" href="#" title="Перейти в раздел Купить криптовалюту">
                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
                             <circle cx="12" cy="12" r="9"></circle>
-                            <path d="M15 9l-6 6"></path>
-                            <path d="M9 9l6 6"></path>
+                            <path d="M9 12h6"></path>
+                            <path d="M12 9v6"></path>
                         </svg>
-                        <span>Мои комиссии</span>
+                        <span>Купить Криптовалюту</span>
                     </a>
-                    <a class="nav-item" href="#" title="Перейти в раздел Уведомления">
-                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
-                            <path d="M6 8a6 6 0 1 1 12 0c0 7 3 6 3 8H3c0-2 3-1 3-8"></path>
-                            <path d="M10 20a2 2 0 0 0 4 0"></path>
-                        </svg>
-                        <span>Уведомления</span>
-                    </a>
-                </nav>
-            </section>
 
-            <section aria-labelledby="settings-nav-title">
-                <h2 class="nav-group-title" id="settings-nav-title">Настройки</h2>
-                <nav class="nav" aria-label="Навигация по настройкам">
-                    <a class="nav-item" href="#" title="Перейти в раздел Настройки">
+                    <a class="nav-item " href="#" aria-current="page" title="Текущий раздел Торговля">
                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
-                            <circle cx="12" cy="12" r="3"></circle>
-                            <path
-                                d="M19.4 15a1.6 1.6 0 0 0 .32 1.76l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.6 1.6 0 0 0 15 19.4a1.6 1.6 0 0 0-1 .6 1.6 1.6 0 0 0-.4 1V21a2 2 0 1 1-4 0v-.09a1.6 1.6 0 0 0-.4-1 1.6 1.6 0 0 0-1-.6 1.6 1.6 0 0 0-1.76.32l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.6 1.6 0 0 0 4.6 15a1.6 1.6 0 0 0-.6-1 1.6 1.6 0 0 0-1-.4H3a2 2 0 1 1 0-4h.09a1.6 1.6 0 0 0 1-.4 1.6 1.6 0 0 0 .6-1 1.6 1.6 0 0 0-.32-1.76l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.6 1.6 0 0 0 9 4.6a1.6 1.6 0 0 0 1-.6 1.6 1.6 0 0 0 .4-1V3a2 2 0 1 1 4 0v.09a1.6 1.6 0 0 0 .4 1 1.6 1.6 0 0 0 1 .6 1.6 1.6 0 0 0 1.76-.32l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.6 1.6 0 0 0 19.4 9c.24.3.47.64.6 1 .09.3.14.64.14 1s-.05.7-.14 1c-.13.36-.36.7-.6 1z">
-                            </path>
+                            <path d="M4 16l4-5 4 3 6-8"></path>
+                            <path d="M18 6h2v2"></path>
                         </svg>
-                        <span>Настройки</span>
+                        <span>Торговля</span>
                     </a>
-                    <a class="nav-item" href="#" title="Перейти в раздел API ключи">
+
+                    <a class="nav-item" href="#" title="Перейти в раздел О нас">
                         <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
-                            <path d="M4 7h16"></path>
-                            <path d="M4 12h9"></path>
-                            <path d="M4 17h16"></path>
-                            <circle cx="17" cy="12" r="3"></circle>
+                            <circle cx="12" cy="12" r="9"></circle>
+                            <path d="M12 10v5"></path>
+                            <path d="M12 7h.01"></path>
                         </svg>
-                        <span>API ключи</span>
+                        <span>О нас</span>
+                    </a>
+
+                    <a class="nav-item" href="#" title="Перейти в раздел Поддержка">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <path
+                                d="M12 3a8 8 0 0 0-8 8v2a2 2 0 0 0 2 2h1v-4H6v-1a6 6 0 1 1 12 0v1h-1v4h1a2 2 0 0 0 2-2v-2a8 8 0 0 0-8-8z">
+                            </path>
+                            <path d="M10 18h4"></path>
+                        </svg>
+                        <span>Поддержка</span>
                     </a>
                 </nav>
             </section>
