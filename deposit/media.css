@@ -339,11 +339,15 @@
     
     .network-grid
      {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         justify-items: center;
     }
     .deposit-layout {
         grid-template-columns: 1fr;
+    }
+    .network-card{
+        max-width: 179.5px;
+        padding: 6.3px 6.3px 6.6px;
     }
 
 }
