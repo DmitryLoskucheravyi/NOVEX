@@ -364,7 +364,7 @@ a:hover {
 
 .page-header h1 {
   margin-bottom: 6.8px;  /* 8px * 0.85 */
-  font-size: clamp(1.7rem, 4.25vw, 2.7625rem); /* clamp(2rem,5vw,3.25rem) * 0.85 */
+  font-size: clamp(1.53rem, 3.83vw, 2.49rem); /* clamp(2rem,5vw,3.25rem) * 0.85 */
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.02em;
@@ -653,6 +653,7 @@ a:hover {
   grid-template-columns: minmax(0, 1fr) 11.6875rem; /* 13.75rem * 0.85 */
   gap: 1.275rem;  /* 1.5rem * 0.85 */
   align-items: start;
+  
 }
 
 .field-label {
