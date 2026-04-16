@@ -30,15 +30,6 @@
          grid-template-columns: 1fr; 
     } */
 
-    .qr-panel {
-        align-items: flex-start;
-    }
-
-    .qr-box {
-        width: min(11.7rem, 100%);
-        /* 13rem * 0.9 */
-    }
-
     .table-footer {
         flex-direction: column;
         align-items: flex-start;
@@ -151,12 +142,6 @@
         align-items: flex-start;
     }
 
-    .deposit-meta {
-        width: 100%;
-        grid-template-columns: 1fr;
-
-    }
-
     .network-grid,
     .coin-row {
         grid-template-columns: 1fr 1fr;
@@ -171,16 +156,6 @@
     .network-top {
         gap: 0.675rem;
         /* 0.75rem * 0.9 */
-    }
-
-    .address-box {
-        align-items: flex-start;
-    }
-
-    .address-box code {
-        white-space: normal;
-        overflow-wrap: anywhere;
-        word-break: break-word;
     }
 
     .table-title {
