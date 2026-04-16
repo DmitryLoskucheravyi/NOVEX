@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Page Replica</title>
+    <link rel="stylesheet" href="deposit-modal.css">
+    <link rel="stylesheet" href="deposit.css">
+    <link rel="stylesheet" href="media.css" media="screen and (max-width: 768px)">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__left">
+                <button class="mobile-sidebar-toggle js-mobile-sidebar-toggle" type="button" aria-label="Открыть меню"
+                    aria-expanded="false" title="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- <a href="#" class="header__logo" title="NOVEX">
+                    <img src="assets/logo.svg" alt="NOVEX">
+                    <span>NOVEX</span>
+                </a> -->
+
+                <a href="#" class="header__logo" title="NOVEX">
+                    <span>NOVEX</span>
+                </a>
+            </div>
+
+            <nav class="header__nav js-header-nav" aria-label="Основная навигация сайта">
+                <a href="#" class="header__nav-link">Купить криптовалюту</a>
+                <a href="#" class="header__nav-link">Конвертация</a>
+                <a href="#" class="header__nav-link">Торговля</a>
+                <a href="#" class="header__nav-link">Баланс</a>
+                <a href="#" class="header__nav-link">О нас</a>
+                <a href="#" class="header__nav-link">Поддержка</a>
+                <button class="header__nav-more js-header-nav-more" type="button" aria-label="Ещё">
+                    Ещё <span class="header__nav-more-arrow">▾</span>
+                    <div class="header__nav-dropdown js-header-nav-dropdown"></div>
+                </button>
+            </nav>
+
+            <div class="header__right">
+                <button class="header__lang" type="button">RU</button>
+                <button class="header__icon-btn js-header-notif" type="button" aria-label="Уведомления">
+                    🔔
+                </button>
+                <div class="header__profile">
+                    <div class="header__avatar">AT</div>
+                    <span class="header__name">AlphaTrader</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="app">
+
+        <aside class="sidebar">
+            <section aria-labelledby="account-nav-title">
+                <h2 class="nav-group-title" id="account-nav-title">Аккаунт</h2>
+                <nav class="nav" aria-label="Навигация по аккаунту">
+                    <a class="nav-item" href="#" title="Перейти в раздел Баланс">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <rect x="3" y="6" width="18" height="12" rx="2"></rect>
+                            <path d="M16 12h2"></path>
+                            <path d="M3 9h18"></path>
+                        </svg>
+                        <span>Баланс</span>
+                    </a>
+
+                    <a class="nav-item active" href="#" title="Перейти в раздел Депозит">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <path d="M12 3v18"></path>
+                            <path d="M7 8l5-5 5 5"></path>
+                        </svg>
+                        <span>Депозит</span>
+                    </a>
+
+                    <a class="nav-item" href="#" title="Перейти в раздел Вывод средств">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <path d="M12 3v18"></path>
+                            <path d="M7 16l5 5 5-5"></path>
+                        </svg>
+                        <span>Вывод средств</span>
+                    </a>
+
+                    <a class="nav-item" href="#" title="Перейти в раздел Конвертация">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <path d="M17 1l4 4-4 4"></path>
+                            <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                            <path d="M7 23l-4-4 4-4"></path>
+                            <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                        </svg>
+                        <span>Конвертация</span>
+                    </a>
+                </nav>
+            </section>
+
+            <section aria-labelledby="finance-nav-title">
+                <h2 class="nav-group-title" id="finance-nav-title">Финансы</h2>
+                <nav class="nav" aria-label="Навигация по финансам">
+                    <a class="nav-item" href="#" title="Перейти в раздел Купить криптовалюту">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9"></circle>
+                            <path d="M9 12h6"></path>
+                            <path d="M12 9v6"></path>
+                        </svg>
+                        <span>Купить Криптовалюту</span>
+                    </a>
+
+                    <a class="nav-item " href="#" aria-current="page" title="Текущий раздел Торговля">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <path d="M4 16l4-5 4 3 6-8"></path>
+                            <path d="M18 6h2v2"></path>
+                        </svg>
+                        <span>Торговля</span>
+                    </a>
+
+                    <a class="nav-item" href="#" title="Перейти в раздел О нас">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9"></circle>
+                            <path d="M12 10v5"></path>
+                            <path d="M12 7h.01"></path>
+                        </svg>
+                        <span>О нас</span>
+                    </a>
+
+                    <a class="nav-item" href="#" title="Перейти в раздел Поддержка">
+                        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
+                            <path
+                                d="M12 3a8 8 0 0 0-8 8v2a2 2 0 0 0 2 2h1v-4H6v-1a6 6 0 1 1 12 0v1h-1v4h1a2 2 0 0 0 2-2v-2a8 8 0 0 0-8-8z">
+                            </path>
+                            <path d="M10 18h4"></path>
+                        </svg>
+                        <span>Поддержка</span>
+                    </a>
+                </nav>
+            </section>
+
+            <section class="support-box" aria-labelledby="support-title">
+                <h2 id="support-title">Нужна помощь?</h2>
+                <p>Обратитесь в нашу поддержку, если у вас возникли вопросы по депозиту.</p>
+                <button type="button" title="Связаться с поддержкой">Связаться с поддержкой</button>
+            </section>
+        </aside>
+
+        <div class="sidebar-overlay js-sidebar-overlay" aria-hidden="true"></div>
+
+        <main class="content">
+            <div class="page">
+                <header class="page-header">
+                    <h1>Вывод средств</h1>
+                    <p>Выведите криптовалюту на внешний кошелек</p>
+                </header>
+
+                <section class="section" aria-labelledby="deposit-step-1-title">
+                    <div class="section-title-row">
+                        <h2 class="substep-title" id="deposit-step-1-title">1. Выберите монету для вывода</h2>
+                        <button class="section-link js-open-coins-modal" type="button"
+                            title="Открыть список других монет">
+                            Другие монеты
+                        </button>
+                    </div>
+
+                    <div class="coin-row js-coin-row" aria-label="Список монет">
+                        <div class="coin-card active" data-coin="USDT" title="Выбрать монету USDT">
+                            <div class="coin-icon">
+                                <img src="assets/usdt-svgrepo-com.svg" alt="USDT">
+                            </div>
+                            <div class="coin-text">
+                                <strong>USDT</strong>
+                                <span>Tether USDT</span>
+                            </div>
+                        </div>
+                        <div class="coin-card" data-coin="BTC" title="Выбрать монету BTC">
+                            <div class="coin-icon btc" aria-hidden="true">₿</div>
+                            <div class="coin-text">
+                                <strong>BTC</strong>
+                                <span>Bitcoin</span>
+                            </div>
+                        </div>
+                        <div class="coin-card" data-coin="ETH" title="Выбрать монету ETH">
+                            <div class="coin-icon eth" aria-hidden="true">◆</div>
+                            <div class="coin-text">
+                                <strong>ETH</strong>
+                                <span>Ethereum</span>
+                            </div>
+                        </div>
+                        <div class="coin-card" data-coin="USDC" title="Выбрать монету USDC">
+                            <div class="coin-icon usdc" aria-hidden="true">$</div>
+                            <div class="coin-text">
+                                <strong>USDC</strong>
+                                <span>USD Coin</span>
+                            </div>
+                        </div>
+                        <div class="coin-card" data-coin="BNB" title="Выбрать монету BNB">
+                            <div class="coin-icon bnb" aria-hidden="true">◇</div>
+                            <div class="coin-text">
+                                <strong>BNB</strong>
+                                <span>BNB</span>
+                            </div>
+                        </div>
+                        <div class="coin-card" data-coin="TRX" title="Выбрать монету TRX">
+                            <div class="coin-icon xrp" aria-hidden="true">X</div>
+                            <div class="coin-text">
+                                <strong>XRP</strong>
+                                <span>XRP</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="coins-modal js-coins-modal" aria-hidden="true">
+                    <div class="coins-modal__overlay js-coins-modal-overlay"></div>
+
+                    <div class="coins-modal__dialog" role="dialog" aria-modal="true" aria-label="Выбор монеты">
+                        <div class="coins-modal__header">
+                            <h3 class="coins-modal__title">Другие монеты</h3>
+                            <button class="coins-modal__close js-close-coins-modal" type="button"
+                                aria-label="Закрыть окно выбора монеты" title="Закрыть окно">
+                                ×
+                            </button>
+                        </div>
+
+                        <div class="coins-modal__list js-extra-coins-list"></div>
+                    </div>
+                </div>
+
+                <section class="section sec-deposit-step-2" aria-labelledby="deposit-step-2-title">
+                    <h2 class="substep-title" id="deposit-step-2-title">2. Детали вывода</h2>
+                    <p class="network-title">Выберите сеть</p>
+
+                    <div class="network-grid js-network-grid" aria-label="Список сетей"></div>
+
+                    <div class="hint-row">
+                        <div class="hint-icon" aria-hidden="true">i</div>
+                        <div>
+                            Убедитесь, что выбранная сеть совпадает с сетью получающего кошелька. Иначе средства могут
+                            быть потеряны.
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section withdraw-section">
+
+                    <div class="withdraw-grid">
+
+                        <!-- Адрес -->
+                        <div class="form-group">
+                            <label>Адрес вывода</label>
+
+                            <div class="input-box">
+                                <input type="text" placeholder="Введите адрес кошелька" class="paste__text">
+                                <button class="icon-btn">📋</button>
+                            </div>
+
+                            <div class="form-links">
+                                <button>Сохраненные адреса</button>
+                                <button>+ Добавить адрес</button>
+                            </div>
+                        </div>
+
+                        <!-- Сумма -->
+                        <div class="form-group">
+                            <label>Сумма вывода</label>
+
+                            <div class="input-box">
+                                <input type="number" placeholder="Введите сумму">
+                                <span class="suffix"><span class="js-warning-coin-span">USDT</span></span>
+                                <button class="max-btn">Макс.</button>
+                            </div>
+
+                            <div class="form-hint">
+                                <span>Доступно: <strong><span class="balance">1235</span> <span
+                                            class="js-warning-coin-span">USDT</span></strong></span>
+                                <span>Минимальная сумма: <b class="js_coin-name">1 <span
+                                            class="js-warning-coin-span">USDT</span></b></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- WARNING -->
+                    <div class="warning-box">
+                        <p><span>⚠</span> Внимание!</p>
+                        <ul>
+                            <li>Минимальная сумма вывода: 1 <span class="js-warning-coin-span"> USDT</span></li>
+                            <li>Комиссия будет вычтена из суммы вывода</li>
+                            <li>Отправляйте только <span class="js-warning-coin-span"> USDT</span> в сети <span
+                                    class="js-network-name">TRC20</span> </li>
+                        </ul>
+                    </div>
+
+                    <!-- FOOTER -->
+                    <div class="withdraw-footer">
+                        <div class="withdraw-info">
+                            <div>
+                                <span>Вы получите</span>
+                                <strong class="draw_value">0 <span class="js-warning-coin-span"> USDT</span></strong>
+                            </div>
+                            <div>
+                                <span>Комиссия сети</span>
+                                <strong class="comission_mereg_value">1 <span class="js-warning-coin-span">
+                                        USDT</span></strong>
+                            </div>
+                            <div>
+                                <span>Сеть</span>
+                                <strong class="js-network-name">TRC20</strong>
+                            </div>
+                            <div>
+                                <span>Время</span>
+                                <strong class="op_time">≈ 1 мин</strong>
+                            </div>
+
+                        </div>
+                        <button class="withdraw-btn" disabled>
+                            Вывести средства
+                        </button>
+
+                    </div>
+                </section>
+
+                <section class="section" aria-labelledby="withdrawal-history-title">
+                    <div class="table-header">
+                        <h2 class="table-title" id="withdrawal-history-title">
+                            3. История выводов USDT
+                        </h2>
+
+                        <button class="section-link js-toggle-history" type="button"
+                            title="Показать или скрыть полную историю выводов">
+                            Посмотреть все
+                        </button>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Дата</th>
+                                    <th scope="col">Монета</th>
+                                    <th scope="col">Сеть</th>
+                                    <th scope="col">Адрес</th>
+                                    <th scope="col">Сумма</th>
+                                    <th scope="col">Комиссия</th>
+                                    <th scope="col">Статус</th>
+                                    <th scope="col">TxID</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>12.05.2024 14:32</td>
+                                    <td>USDT</td>
+                                    <td>TRC20</td>
+                                    <td>TVq...nJ8k</td>
+                                    <td>500 USDT</td>
+                                    <td>1 USDT</td>
+                                    <td><span class="status success">Успешно</span></td>
+                                    <td>
+                                        <a class="tx-link" href="#" title="7f3a...b8c9">
+                                            7f3a...b8c9
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>11.05.2024 09:15</td>
+                                    <td>USDT</td>
+                                    <td>ERC20</td>
+                                    <td>0x45...a7f2</td>
+                                    <td>250 USDT</td>
+                                    <td>5 USDT</td>
+                                    <td><span class="status success">Успешно</span></td>
+                                    <td>
+                                        <a class="tx-link" href="#" title="e2d1...a7f4">
+                                            e2d1...a7f4
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>09.05.2024 17:48</td>
+                                    <td>USDT</td>
+                                    <td>BEP20</td>
+                                    <td>0x89...3d21</td>
+                                    <td>100 USDT</td>
+                                    <td>0.8 USDT</td>
+                                    <td><span class="status success">Успешно</span></td>
+                                    <td>
+                                        <a class="tx-link" href="#" title="c9b2...d3e7">
+                                            c9b2...d3e7
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <!-- hidden rows -->
+                                <tr class="history-extra-row">
+                                    <td>08.05.2024 11:03</td>
+                                    <td>USDT</td>
+                                    <td>TRC20</td>
+                                    <td>TVq...nJ8k</td>
+                                    <td>350 USDT</td>
+                                    <td>1 USDT</td>
+                                    <td><span class="status processing">В обработке</span></td>
+                                    <td>—</td>
+                                </tr>
+
+                                <tr class="history-extra-row">
+                                    <td>07.05.2024 20:21</td>
+                                    <td>USDT</td>
+                                    <td>TRC20</td>
+                                    <td>TVq...nJ8k</td>
+                                    <td>200 USDT</td>
+                                    <td>1 USDT</td>
+                                    <td><span class="status failed">Неудачно</span></td>
+                                    <td>—</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-footer">
+                        <div class="footer-note">
+                            <div class="shield" aria-hidden="true">🛡</div>
+                            <div>
+                                <strong>Вывод не поступил?</strong>
+                                <p>Проверьте статус транзакции в блокчейне или обратитесь в поддержку.</p>
+                            </div>
+                        </div>
+
+                        <button class="status-btn" type="button" title="Проверить статус вывода">
+                            Проверить статус
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="deposit.js"></script>
+</body>
+
+</html>
